@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <!-- BT Trên lớp -->
+
+
+        <!-- BTVN starts -->
+        <!-- B1: Tính tiền lương -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card mt-5">
+                    <div class="card-header">
+                        Sắp xếp số theo thứ tự tăng dần
+                    </div>
+                    <div class="card-body">
+                        <h4>Mời nhập vào 3 số nguyên</h4>
+                        <div class="form-group">
+                            <label for="number1">Số nguyên thứ 1:</label>
+                            <input type="text" class="form-control" id="number1">
+                        </div>
+                        <div class="form-group">
+                            <label for="number2">Số nguyên thứ 2:</label>
+                            <input type="text" class="form-control" id="number2">
+                        </div>
+                        <div class="form-group">
+                            <label for="number3">Số nguyên thứ 3:</label>
+                            <input type="text" class="form-control" id="number3">
+                        </div>
+                    </div>
+                    <button id="compare-btn" class="btn btn-danger">Sắp xếp</button>
+                    <div class="compare-footer card-footer text-muted">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- B2: Soạn lời chào -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card mt-5">
+                    <div class="card-header">
+                        Chào hỏi
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="user-selection">Ai là người sử dụng máy?</label>
+                            <select class="form-control" id="user-selection">
+                                <option disabled>--Người sử dụng--</option>
+                                <option value="bố">Bố</option>
+                                <option value="mẹ">Mẹ</option>
+                                <option value="anh trai">Anh trai</option>
+                                <option value="em gái">Em gái</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="greeting-btn" class="btn btn-info">Gửi</button>
+                    <div class="greeting-footer card-footer text-muted">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- B3: Đếm số chẵn, lẻ -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card mt-5">
+                    <div class="card-header">
+                        Đếm số lượng các số chẵn, lẻ
+                    </div>
+                    <div class="card-body">
+                        <h4>Mời nhập vào 3 số nguyên</h4>
+                        <div class="form-group">
+                            <label for="number_1">Số nguyên 1:</label>
+                            <input type="text" id="number_1" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="number_2">Số nguyên 2:</label>
+                            <input type="text" id="number_2" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="number_3">Số nguyên 3:</label>
+                            <input type="text" id="number_3" class="form-control">
+                        </div>
+                    </div>
+                    <button id="counting-btn" class="btn btn-success">Đếm</button>
+                    <div class="counting-footer card-footer text-muted">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- B5: Xác định dạng tam gíac -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card mt-5">
+                    <div class="card-header">
+                        Xác định loại tam giác
+                    </div>
+                    <div class="card-body">
+                        <h4>Mời nhập vào 3 cạnh của tam gíac</h4>
+                        <div class="form-group">
+                            <label for="side_1">Cạnh 1:</label>
+                            <input type="text" id="side_1" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="side_2">Cạnh 2:</label>
+                            <input type="text" id="side_2" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="side_3">Cạnh 3:</label>
+                            <input type="text" id="side_3" class="form-control">
+                        </div>
+                    </div>
+                    <button id="identify-btn" class="btn btn-success">Tính</button>
+                    <div class="identify-footer card-footer text-muted">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- BTVN Nâng cao 1: Xác định ngày -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card mt-5">
+                    <div class="card-header bg-info text-white">
+                        Xác định ngày
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="date">Ngày</label>
+                            <input type="text" class="form-control" id="date" placeholder="Mời nhập ngày">
+                        </div>
+                        <div class="form-group">
+                            <label for="month">Tháng</label>
+                            <input type="text" class="form-control" id="month" placeholder="Mời nhập tháng">
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Năm</label>
+                            <input type="text" class="form-control" id="year" placeholder="Mời nhập năm">
+                        </div>
+                    </div>
+                    <button id="calendar-btn" class="btn btn-info">Tìm</button>
+                    <div class="calendar-footer card-footer text-muted">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BTVN Nâng cao 2: Xác định số ngày trong tháng -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card mt-5">
+                    <div class="card-header bg-primary text-white">
+                        Xác định số ngày trong tháng
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="current_month">Tháng</label>
+                            <input type="text" class="form-control" id="current_month" placeholder="Mời nhập tháng">
+                        </div>
+                        <div class="form-group">
+                            <label for="current_year">Năm</label>
+                            <input type="text" class="form-control" id="current_year" placeholder="Mời nhập năm">
+                        </div>
+                    </div>
+                    <button id="month-btn" class="btn btn-primary">Tìm</button>
+                    <div class="month-footer card-footer text-muted">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BTVN Nâng cao 3: Cách đọc ra số nguyên có 3 chữ số -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card mt-5">
+                    <div class="card-header bg-danger text-white">
+                        Đọc số
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="3-digit-number">Số nguyên có 3 chữ số:</label>
+                            <input type="text" class="form-control" id="3-digit-number" placeholder="Mời nhập vào số nguyên có 3 chữ số">
+                        </div>
+                    </div>
+                    <button id="read-number-btn" class="btn btn-danger">Cách đọc</button>
+                    <div class="read-number-footer card-footer text-muted">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- BTVN ends -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
