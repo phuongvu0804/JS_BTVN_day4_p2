@@ -538,3 +538,67 @@ document.getElementById("read-number-btn").onclick = function () {
   var readNumberNoti = '<div class = "alert alert-success">' + hundredPronounce + ' ' + tenPronounce + ' ' + unitPronounce + '</div>';
   document.querySelector(".read-number-footer").innerHTML = readNumberNoti;
 };
+
+/* Bài tập nâng cao  
+Bài 4: 
+Input:
+- Toạ độ trường đh
+- Toạ độ nhà của 3 sinh viên 
+Process:
+    -Lắng nghe sự kiện onclick của button Tìm, tại thời điểm click: sẽ
+        +Lấy giá trị tên của 3 sinh viên và lưu lại giá trị vào các biến: student 1 -> 3
+        +Lấy giá trị x,y của 3 sinh viên và lưu lại giá trị vào các biến: x1, y1, x2, y2, x3, y3. 
+        +Nhân các giá trị trên với 1 để chuyển kiểu dữ liệu về number
+        +Tạo các biến cho toạ độ trường đh: x0, y0 
+        +Tạo biến khoảng cách của 3 sinh viên tới trường như sau
+          +distance1 = Math.sqrt((x1-x0)*(x1-x0) + (y1-y0)*(y1-y0)). Tương tự với distance2 và distance3
+        +Tạo biến longestDistance. Dùng câu lệnh if để so sánh các giá trị distance 1->3; gán giá trị lớn nhất cho longest
+        distance
+        +Tạo biến thông báo kết quả:
+        +Sử dụng innerHTML đề chèn phần thông báo kết quả vào div.footer
+        đã được code sẵn tại file html 
+Output:
+-  Tên sinh viên ở xa trường nhất
+ */
+
+document.getElementById("distance-btn").onclick = function () {
+  var student1 = document.getElementById("student-name-1").value;
+  var student2 = document.getElementById("student-name-2").value;
+  var student3 = document.getElementById("student-name-3").value;
+
+  var x1 = document.getElementById("x1").value * 1;
+  var y1 = document.getElementById("y1").value * 1;
+  var x2 = document.getElementById("x2").value * 1;
+  var y2 = document.getElementById("y2").value * 1;
+  var x3 = document.getElementById("x3").value * 1;
+  var y3 = document.getElementById("y3").value * 1;
+  var x0 = 0;
+  var y0 = 0
+  
+  var distance1 = Math.sqrt((x1-x0)*(x1-x0) + (y1-y0)*(y1-y0));
+  var distance2 = Math.sqrt((x2-x0)*(x2-x0) + (y2-y0)*(y2-y0));
+  var distance3 = Math.sqrt((x3-x0)*(x3-x0) + (y3-y0)*(y3-y0));
+
+  var longestDistance;
+
+  if (distance1 > distance2) {
+    if(distance1 > distance3) {
+      longestDistance = student1;
+    }
+    else {
+      longestDistance = student3;
+    }
+  } else {
+    if (distance2 > distance3) {
+      longestDistance = student2
+    }
+    else {
+      longestDistance = student3
+    }
+  }
+
+
+  distanceNoti = '<div class = "alert alert-success">Người có nhà xa trường nhất là: ';
+  distanceNoti += longestDistance + ".</div>";
+  document.querySelector(".distance-footer").innerHTML = distanceNoti;
+};
